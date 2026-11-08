@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-fx="ultra" data-motion="motion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<meta name="description" content="Contact BLauncher MOD — reach the crew behind Minecraft, Amplified. Feature requests, bug reports, creator questions.">
+<title>Contact — BLauncher MOD</title>
+<link rel="icon" type="image/png" href="/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="contact">
+<header class="hdr">
+  <div class="container hdr-in">
+    <a class="brand" href="/"><img src="/assets/img/logo.png" alt="BLauncher MOD logo" width="30" height="30"><span><b>BLAUNCHER&nbsp;<span>MOD</span></b><small>MINECRAFT, AMPLIFIED</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <a data-nav="home" href="/">Home</a>
+      <a data-nav="special" href="/special.html">Special</a>
+      <a data-nav="versions" href="/versions.html">Versions</a>
+      <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+      <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+      <a data-nav="upload" href="/upload.html">Upload</a>
+      <a data-nav="publish" href="/publish.html">Publish</a>
+      <a data-nav="favorites" href="/favorites.html">Favorites</a>
+      <a data-nav="about" href="/about.html">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="icon-btn" href="/settings.html" title="Settings" aria-label="Settings">&#9881;</a>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"><span>&#9678;</span></button>
+      <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile menu">
+  <a data-nav="home" href="/">Home</a>
+  <a data-nav="special" href="/special.html">Special</a>
+  <a data-nav="versions" href="/versions.html">Versions</a>
+  <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+  <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+  <a data-nav="upload" href="/upload.html">Upload</a>
+  <a data-nav="publish" href="/publish.html">Publish</a>
+  <a data-nav="favorites" href="/favorites.html">Favorites</a>
+  <a data-nav="settings" href="/settings.html">Settings</a>
+  <a data-nav="about" href="/about.html">About</a>
+  <a data-nav="privacy" href="/privacy.html">Privacy Policy</a>
+  <a data-nav="contact" href="/contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumb">BLAUNCHER MOD // CONTACT</div>
+      <h1>GET IN <span class="text-grad">TOUCH</span></h1>
+      <p>Feature ideas, bug reports, creator collaboration or sponsor questions — the portal answers to you. Configure the inbox address once (see contact.js) and every message lands in your email app pre-filled.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="container grid2feat">
+      <form class="panel" id="cf" novalidate>
+        <h2 class="sec-title">Message <span class="text-grad">console</span></h2>
+        <div class="field"><label for="cName">Your name <span class="req">*</span></label>
+          <input id="cName" maxlength="40" placeholder="Steve Builder">
+          <div class="err" id="cNameErr"></div></div>
+        <div class="field"><label for="cTopic">Topic</label>
+          <select id="cTopic">
+            <option>Feature request</option>
+            <option>Bug report</option>
+            <option>Creator / collaboration</option>
+            <option>CurseForge setup help</option>
+            <option>Sponsorship (Arif The Gamer)</option>
+          </select></div>
+        <div class="field"><label for="cBody">Message <span class="req">*</span> <span class="help">(20+ chars)</span></label>
+          <textarea id="cBody" maxlength="2000" placeholder="Tell us everything…"></textarea>
+          <div class="err" id="cBodyErr"></div></div>
+        <button class="btn btn-c btn-block" type="submit" id="cSend">Open mail &amp; send</button>
+        <p class="help center mt-s">Composes an email in your own mail app — no forms, no tracking. Chapters: <span class="mono" style="color:var(--cyan)" id="cInbox">configured in assets/js/pages/contact.js</span></p>
+      </form>
+
+      <div>
+        <div class="panel tight mb-s">
+          <h2 class="sec-title">Channels</h2>
+          <div class="rowlist mt-s">
+            <div class="vrow"><span class="vid">MAIL</span><span class="vmeta">prefilled via the console form</span></div>
+            <div class="vrow"><span class="vid">YOUTUBE</span><span class="vmeta"><a target="_blank" rel="noopener" href="https://www.youtube.com/@ArifTheGamer">Arif The Gamer channel &#8599;</a></span></div>
+            <div class="vrow"><span class="vid">GITHUB</span><span class="vmeta"><a target="_blank" rel="noopener" href="https://github.com/">issues &amp; pull requests &#8599;</a></span></div>
+          </div>
+          <p class="help mt-s">Average reply time: 1&ndash;3 days. CurseForge key setup questions welcome — check API_SETUP.md first.</p>
+        </div>
+        <div class="panel center" style="display:grid;gap:10px">
+          <div class="portal" style="margin:0 auto"><div class="ring"></div><div class="ring ring2"></div><div class="ring ring3"></div><div class="core"><img class="img-px" src="/assets/img/logo.png" alt="" width="70" height="70"></div></div>
+          <p class="help">The portal is one mail away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="container ftr-in">
+    <div>
+      <div class="brandline"><img src="/assets/img/logo.png" alt="" width="38" height="38"><div><h4>BLauncher MOD</h4><p class="slogan">Minecraft, Amplified.</p></div></div>
+      <p class="mt-s">A premium fan-made portal for Minecraft mods, modpacks, resource packs and shaders — powered by the official Modrinth &amp; CurseForge APIs.</p>
+      <p class="sponsor">&#9733; Made &amp; sponsored by <strong>Arif The Gamer</strong></p>
+      <div class="disc"><strong>Disclaimer:</strong> BLauncher MOD is an independent unofficial fan-made website and is not affiliated with Mojang Studios, Microsoft, Modrinth, CurseForge or Overwolf.</div>
+    </div>
+    <div>
+      <h4>Portals</h4>
+      <a href="/modrinth.html">Modrinth Search</a>
+      <a href="/curseforge.html">CurseForge Search</a>
+      <a href="/versions.html">Minecraft Versions</a>
+      <a href="/special.html">Special Showcase</a>
+    </div>
+    <div>
+      <h4>Creators</h4>
+      <a href="/upload.html">Upload Project</a>
+      <a href="/publish.html">Admin Publish</a>
+      <a href="/favorites.html">Favorites</a>
+      <a href="/settings.html">Settings</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a target="_blank" rel="noopener" href="https://modrinth.com">modrinth.com &#8599;</a>
+      <a target="_blank" rel="noopener" href="https://www.curseforge.com">curseforge.com &#8599;</a>
+    </div>
+  </div>
+  <div class="container"><div class="btm">
+    <span>&copy; <span id="fyear"></span> BLauncher MOD — Minecraft, Amplified.</span>
+    <span>&#9733; Made &amp; sponsored by Arif The Gamer</span>
+  </div></div>
+</footer>
+
+<script src="/assets/data/versions.min.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/api.js" defer></script>
+<script src="/assets/js/pages/contact.js" defer></script>
+</body>
+</html>

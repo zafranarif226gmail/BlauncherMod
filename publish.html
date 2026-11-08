@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-fx="ultra" data-motion="motion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<meta name="description" content="Admin review dashboard for BLauncher MOD — pending, approved and rejected community submissions with secure password authentication.">
+<title>Publish — Admin Review — BLauncher MOD</title>
+<link rel="icon" type="image/png" href="/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="publish">
+<header class="hdr">
+  <div class="container hdr-in">
+    <a class="brand" href="/"><img src="/assets/img/logo.png" alt="BLauncher MOD logo" width="30" height="30"><span><b>BLAUNCHER&nbsp;<span>MOD</span></b><small>MINECRAFT, AMPLIFIED</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <a data-nav="home" href="/">Home</a>
+      <a data-nav="special" href="/special.html">Special</a>
+      <a data-nav="versions" href="/versions.html">Versions</a>
+      <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+      <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+      <a data-nav="upload" href="/upload.html">Upload</a>
+      <a data-nav="publish" href="/publish.html">Publish</a>
+      <a data-nav="favorites" href="/favorites.html">Favorites</a>
+      <a data-nav="about" href="/about.html">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="icon-btn" href="/settings.html" title="Settings" aria-label="Settings">&#9881;</a>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"><span>&#9678;</span></button>
+      <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile menu">
+  <a data-nav="home" href="/">Home</a>
+  <a data-nav="special" href="/special.html">Special</a>
+  <a data-nav="versions" href="/versions.html">Versions</a>
+  <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+  <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+  <a data-nav="upload" href="/upload.html">Upload</a>
+  <a data-nav="publish" href="/publish.html">Publish</a>
+  <a data-nav="favorites" href="/favorites.html">Favorites</a>
+  <a data-nav="settings" href="/settings.html">Settings</a>
+  <a data-nav="about" href="/about.html">About</a>
+  <a data-nav="privacy" href="/privacy.html">Privacy Policy</a>
+  <a data-nav="contact" href="/contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumb">BLAUNCHER MOD // PUBLISH</div>
+      <h1>ADMIN <span class="text-grad">REVIEW DASHBOARD</span></h1>
+      <p>Approve, reject and manage creator submissions. Access is password-gated (SHA-256, never stored in plain). Approved projects go live in Special &rarr; Community spotlight.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="container">
+      <!-- gate -->
+      <div class="panel tight" id="gate" style="max-width:460px;margin:0 auto">
+        <h2 class="sec-title center">ADMIN <span class="text-grad">LOGIN</span></h2>
+        <div class="field">
+          <label for="pw">Admin password</label>
+          <input id="pw" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" autocomplete="current-password">
+          <div class="err" id="pwErr"></div>
+          <div class="help">Default password is documented in README.md — change it after first login.</div>
+        </div>
+        <button class="btn btn-u btn-block" id="loginBtn">Unlock dashboard</button>
+      </div>
+
+      <!-- dashboard -->
+      <div id="dash" style="display:none">
+        <div class="panel tight mb">
+          <div class="stats-line" style="justify-content:space-between">
+            <button class="btn btn-sm btn-gh" id="chPass">Change password</button>
+            <div class="pillset"><span class="count-pill" id="dPending">0 pending</span><span class="count-pill" id="dApproved">0 approved</span><span class="count-pill" id="dRejected">0 rejected</span></div>
+            <button class="btn btn-sm btn-gh" id="logoutBtn">Log out</button>
+          </div>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-st="pending">Pending</button>
+          <button class="tab" data-st="approved">Approved</button>
+          <button class="tab" data-st="rejected">Rejected</button>
+        </div>
+        <div class="grid g3" id="queue"></div>
+      </div>
+
+      <div class="panel mt" style="max-width:520px">
+        <p class="eyebrow">SECURITY MODEL</p>
+        <p class="help">Password is never stored in plain text — only its SHA-256 digest in localStorage, kept on this device. For hosted multi-device deployments, sync the queue through the optional Cloudflare KV function documented in API_SETUP.md and DEPLOYMENT.md.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="container ftr-in">
+    <div>
+      <div class="brandline"><img src="/assets/img/logo.png" alt="" width="38" height="38"><div><h4>BLauncher MOD</h4><p class="slogan">Minecraft, Amplified.</p></div></div>
+      <p class="mt-s">A premium fan-made portal for Minecraft mods, modpacks, resource packs and shaders — powered by the official Modrinth &amp; CurseForge APIs.</p>
+      <p class="sponsor">&#9733; Made &amp; sponsored by <strong>Arif The Gamer</strong></p>
+      <div class="disc"><strong>Disclaimer:</strong> BLauncher MOD is an independent unofficial fan-made website and is not affiliated with Mojang Studios, Microsoft, Modrinth, CurseForge or Overwolf.</div>
+    </div>
+    <div>
+      <h4>Portals</h4>
+      <a href="/modrinth.html">Modrinth Search</a>
+      <a href="/curseforge.html">CurseForge Search</a>
+      <a href="/versions.html">Minecraft Versions</a>
+      <a href="/special.html">Special Showcase</a>
+    </div>
+    <div>
+      <h4>Creators</h4>
+      <a href="/upload.html">Upload Project</a>
+      <a href="/publish.html">Admin Publish</a>
+      <a href="/favorites.html">Favorites</a>
+      <a href="/settings.html">Settings</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a target="_blank" rel="noopener" href="https://modrinth.com">modrinth.com &#8599;</a>
+      <a target="_blank" rel="noopener" href="https://www.curseforge.com">curseforge.com &#8599;</a>
+    </div>
+  </div>
+  <div class="container"><div class="btm">
+    <span>&copy; <span id="fyear"></span> BLauncher MOD — Minecraft, Amplified.</span>
+    <span>&#9733; Made &amp; sponsored by Arif The Gamer</span>
+  </div></div>
+</footer>
+
+<script src="/assets/data/versions.min.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/api.js" defer></script>
+<script src="/assets/js/pages/publish.js" defer></script>
+</body>
+</html>

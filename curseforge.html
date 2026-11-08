@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-fx="ultra" data-motion="motion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<meta name="description" content="Browse CurseForge officially through BLauncher MOD's secure server proxy — search, categories, files and downloads. API key stays server-side.">
+<title>CurseForge Portal — BLauncher MOD</title>
+<link rel="icon" type="image/png" href="/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="curseforge">
+<header class="hdr">
+  <div class="container hdr-in">
+    <a class="brand" href="/"><img src="/assets/img/logo.png" alt="BLauncher MOD logo" width="30" height="30"><span><b>BLAUNCHER&nbsp;<span>MOD</span></b><small>MINECRAFT, AMPLIFIED</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <a data-nav="home" href="/">Home</a>
+      <a data-nav="special" href="/special.html">Special</a>
+      <a data-nav="versions" href="/versions.html">Versions</a>
+      <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+      <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+      <a data-nav="upload" href="/upload.html">Upload</a>
+      <a data-nav="publish" href="/publish.html">Publish</a>
+      <a data-nav="favorites" href="/favorites.html">Favorites</a>
+      <a data-nav="about" href="/about.html">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="icon-btn" href="/settings.html" title="Settings" aria-label="Settings">&#9881;</a>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"><span>&#9678;</span></button>
+      <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile menu">
+  <a data-nav="home" href="/">Home</a>
+  <a data-nav="special" href="/special.html">Special</a>
+  <a data-nav="versions" href="/versions.html">Versions</a>
+  <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+  <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+  <a data-nav="upload" href="/upload.html">Upload</a>
+  <a data-nav="publish" href="/publish.html">Publish</a>
+  <a data-nav="favorites" href="/favorites.html">Favorites</a>
+  <a data-nav="settings" href="/settings.html">Settings</a>
+  <a data-nav="about" href="/about.html">About</a>
+  <a data-nav="privacy" href="/privacy.html">Privacy Policy</a>
+  <a data-nav="contact" href="/contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumb">BLAUNCHER MOD // CURSEFORGE</div>
+      <h1>CURSEFORGE <span class="text-grad">PORTAL</span></h1>
+      <p>The official CurseForge API via a secure server proxy — the key never reaches the browser. If the key is not configured you get a clear setup warning, never fake data.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="container">
+      <div class="warnbox hidden" id="cfnote" style="display:none"></div>
+      <div class="panel tight mb">
+        <div class="fbar c4">
+          <input id="cq" type="search" placeholder="Search CurseForge projects…" autocomplete="off">
+          <select id="ctype" aria-label="Class">
+            <option value="">All classes</option>
+            <option value="6" selected>Mods</option>
+            <option value="4471">Modpacks</option>
+            <option value="12">Resource Packs</option>
+            <option value="6552">Shaders</option>
+            <option value="4559">Worlds</option>
+          </select>
+          <select id="cloader" aria-label="Mod loader">
+            <option value="">Any loader</option>
+            <option value="fabric">Fabric</option>
+            <option value="forge">Forge</option>
+            <option value="neoforge">NeoForge</option>
+            <option value="quilt">Quilt</option>
+          </select>
+          <select id="cmcv" aria-label="Minecraft version"><option value="">Any MC version</option></select>
+        </div>
+        <div class="fbar c3">
+          <select id="csort" aria-label="Sort">
+            <option value="2">Sort: Popularity</option>
+            <option value="3">Sort: Last updated</option>
+            <option value="1">Sort: Featured</option>
+            <option value="8">Sort: Downloads</option>
+            <option value="9">Sort: Newest</option>
+          </select>
+          <select id="ccat" aria-label="Category"><option value="">Category: All (load…)</option></select>
+          <span class="count-pill" id="ccount">…</span>
+        </div>
+        <p class="help" id="cstat">official api.curseforge.com via /api/curseforge proxy · sortField index</p>
+      </div>
+
+      <div class="grid g3" id="cresults">
+        <div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div>
+        <div class="skel skel-card"></div><div class="skel skel-card"></div><div class="skel skel-card"></div>
+      </div>
+      <div class="center mt"><button class="btn btn-p" id="cmore" style="display:none">Load more</button></div>
+      <p class="help center mt">All content via the <a target="_blank" rel="noopener" href="https://docs.curseforge.com">official CurseForge API</a>. Where the official license permits, downloads are served from CurseForge CDN.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="container ftr-in">
+    <div>
+      <div class="brandline"><img src="/assets/img/logo.png" alt="" width="38" height="38"><div><h4>BLauncher MOD</h4><p class="slogan">Minecraft, Amplified.</p></div></div>
+      <p class="mt-s">A premium fan-made portal for Minecraft mods, modpacks, resource packs and shaders — powered by the official Modrinth &amp; CurseForge APIs.</p>
+      <p class="sponsor">&#9733; Made &amp; sponsored by <strong>Arif The Gamer</strong></p>
+      <div class="disc"><strong>Disclaimer:</strong> BLauncher MOD is an independent unofficial fan-made website and is not affiliated with Mojang Studios, Microsoft, Modrinth, CurseForge or Overwolf.</div>
+    </div>
+    <div>
+      <h4>Portals</h4>
+      <a href="/modrinth.html">Modrinth Search</a>
+      <a href="/curseforge.html">CurseForge Search</a>
+      <a href="/versions.html">Minecraft Versions</a>
+      <a href="/special.html">Special Showcase</a>
+    </div>
+    <div>
+      <h4>Creators</h4>
+      <a href="/upload.html">Upload Project</a>
+      <a href="/publish.html">Admin Publish</a>
+      <a href="/favorites.html">Favorites</a>
+      <a href="/settings.html">Settings</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a target="_blank" rel="noopener" href="https://modrinth.com">modrinth.com &#8599;</a>
+      <a target="_blank" rel="noopener" href="https://www.curseforge.com">curseforge.com &#8599;</a>
+    </div>
+  </div>
+  <div class="container"><div class="btm">
+    <span>&copy; <span id="fyear"></span> BLauncher MOD — Minecraft, Amplified.</span>
+    <span>&#9733; Made &amp; sponsored by Arif The Gamer</span>
+  </div></div>
+</footer>
+
+<script src="/assets/data/versions.min.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/api.js" defer></script>
+<script src="/assets/js/pages/curseforge.js" defer></script>
+</body>
+</html>

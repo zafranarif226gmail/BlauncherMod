@@ -1,0 +1,15 @@
+BLAUNCHER — GITHUB PAGES
+
+1. Create a public GitHub repository named BLauncher.
+2. Extract this ZIP on your device.
+3. Upload ALL CONTENTS to the repository root. index.html must be at the root.
+4. Commit to the main branch.
+5. GitHub repository → Settings → Pages → Source: GitHub Actions.
+6. Wait for the Actions workflow to finish.
+7. Open https://YOUR-USERNAME.github.io/BLauncher/
+
+NOTE:
+- GitHub Pages is static hosting. Modrinth and static pages work.
+- CurseForge official API requires a secure server-side proxy. GitHub Pages cannot run the Cloudflare Functions in this project; the CurseForge page will explain this.
+- A custom .com domain must be purchased/owned separately. The free GitHub Pages URL includes github.io.
+- Never place a CurseForge API key in public JavaScript or a public GitHub repository.
