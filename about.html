@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-fx="ultra" data-motion="motion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<meta name="description" content="About BLauncher MOD — the story, the mission, the official-API-first architecture and the team behind Minecraft, Amplified.">
+<title>About — BLauncher MOD</title>
+<link rel="icon" type="image/png" href="/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="about">
+<header class="hdr">
+  <div class="container hdr-in">
+    <a class="brand" href="/"><img src="/assets/img/logo.png" alt="BLauncher MOD logo" width="30" height="30"><span><b>BLAUNCHER&nbsp;<span>MOD</span></b><small>MINECRAFT, AMPLIFIED</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <a data-nav="home" href="/">Home</a>
+      <a data-nav="special" href="/special.html">Special</a>
+      <a data-nav="versions" href="/versions.html">Versions</a>
+      <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+      <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+      <a data-nav="upload" href="/upload.html">Upload</a>
+      <a data-nav="publish" href="/publish.html">Publish</a>
+      <a data-nav="favorites" href="/favorites.html">Favorites</a>
+      <a data-nav="about" href="/about.html">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <a class="icon-btn" href="/settings.html" title="Settings" aria-label="Settings">&#9881;</a>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"><span>&#9678;</span></button>
+      <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile menu">
+  <a data-nav="home" href="/">Home</a>
+  <a data-nav="special" href="/special.html">Special</a>
+  <a data-nav="versions" href="/versions.html">Versions</a>
+  <a data-nav="modrinth" href="/modrinth.html">Modrinth</a>
+  <a data-nav="curseforge" href="/curseforge.html">CurseForge</a>
+  <a data-nav="upload" href="/upload.html">Upload</a>
+  <a data-nav="publish" href="/publish.html">Publish</a>
+  <a data-nav="favorites" href="/favorites.html">Favorites</a>
+  <a data-nav="settings" href="/settings.html">Settings</a>
+  <a data-nav="about" href="/about.html">About</a>
+  <a data-nav="privacy" href="/privacy.html">Privacy Policy</a>
+  <a data-nav="contact" href="/contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumb">BLAUNCHER MOD // ABOUT</div>
+      <h1>ABOUT THE <span class="text-grad">PROJECT</span></h1>
+      <p>Minecraft, Amplified. One cinematic gateway for every mod and every version — honest to the byte.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="container grid2feat">
+      <div class="panel">
+        <p class="eyebrow">THE STORY</p>
+        <h3 class="mono" style="color:var(--emerald);font-size:.8rem">BUILT BY A GAMER, FOR GAMERS</h3>
+        <p class="help mt-s">BLauncher MOD was born from a simple frustration: discovering a mod and getting lost across five sites with fake download buttons. We wanted one beautiful, insanely fast portal that serves real data, real files and zero ads — a launcher-quality hub, amplified.</p>
+        <p class="help mt-s" style="color:var(--purple)">&#9733; Made &amp; sponsored by <strong>Arif The Gamer</strong>. The Android launcher project (BLauncher) and this portal are siblings in the same dream: a smoother Minecraft journey on every device.</p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">ARCHITECTURE</p>
+        <h3 class="mono" style="color:var(--cyan);font-size:.8rem">OFFICIAL APIs ONLY</h3>
+        <ul class="help mt-s" style="padding-left:18px">
+          <li><strong>Modrinth v2</strong> — direct official REST API, cached &amp; debounced in-browser.</li>
+          <li><strong>CurseForge</strong> — official API through a server-side Cloudflare Function; your key never ships to clients.</li>
+          <li><strong>Mojang</strong> — official piston-meta manifest for every true version 1.0 &rarr; 26.3.</li>
+          <li><strong>Stack</strong> — pure HTML/CSS/ES2020, no frameworks, Cloudflare Pages ready.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">PROMISES</p>
+        <h3 class="mono" style="color:var(--purple);font-size:.8rem">HONEST TO THE BYTE</h3>
+        <ul class="help mt-s" style="padding-left:18px">
+          <li>Never fabricated data: no invented mods, versions or stats.</li>
+          <li>Missing API? Clear setup warning, not a fake number.</li>
+          <li>Official files only, from official CDNs.</li>
+          <li>Zero tracking, zero ads, zero forced intros.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">SETUP WARNINGS HANDLED</p>
+        <h3 class="mono" style="color:var(--amber);font-size:.8rem">CURSEFORGE KEY</h3>
+        <p class="help mt-s">The CurseForge portal requires a server-side key. Follow <strong>API_SETUP.md</strong> (in the repository) to publish the key as a Cloudflare environment variable. Until then the site shows a friendly warning — and everything else keeps working.</p>
+        <div class="row"><a class="btn btn-sm btn-p" href="/contact.html">Need help? Contact</a><a class="btn btn-sm btn-gh" href="/curseforge.html">Open CurseForge portal</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="container center panel" style="position:relative;overflow:hidden">
+      <div class="vox" style="left:8%;top:30%"><div class="cube p-cyan" style="width:34px;height:34px;animation-duration:14s"><i></i><i></i><i></i></div></div>
+      <div class="vox" style="right:9%;top:26%"><div class="cube p-pur" style="width:40px;height:40px;animation-duration:18s"><i></i><i></i><i></i></div></div>
+      <h2 class="sec-title mt-s">MINECRAFT, <span class="text-grad">AMPLIFIED</span></h2>
+      <p class="help" style="max-width:520px;margin:0 auto">1.0 &rarr; 26.3 &middot; 167K+ official projects &middot; 2 official APIs &middot; 0 ads</p>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="container ftr-in">
+    <div>
+      <div class="brandline"><img src="/assets/img/logo.png" alt="" width="38" height="38"><div><h4>BLauncher MOD</h4><p class="slogan">Minecraft, Amplified.</p></div></div>
+      <p class="mt-s">A premium fan-made portal for Minecraft mods, modpacks, resource packs and shaders — powered by the official Modrinth &amp; CurseForge APIs.</p>
+      <p class="sponsor">&#9733; Made &amp; sponsored by <strong>Arif The Gamer</strong></p>
+      <div class="disc"><strong>Disclaimer:</strong> BLauncher MOD is an independent unofficial fan-made website and is not affiliated with Mojang Studios, Microsoft, Modrinth, CurseForge or Overwolf.</div>
+    </div>
+    <div>
+      <h4>Portals</h4>
+      <a href="/modrinth.html">Modrinth Search</a>
+      <a href="/curseforge.html">CurseForge Search</a>
+      <a href="/versions.html">Minecraft Versions</a>
+      <a href="/special.html">Special Showcase</a>
+    </div>
+    <div>
+      <h4>Creators</h4>
+      <a href="/upload.html">Upload Project</a>
+      <a href="/publish.html">Admin Publish</a>
+      <a href="/favorites.html">Favorites</a>
+      <a href="/settings.html">Settings</a>
+    </div>
+    <div>
+      <h4>Info</h4>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a target="_blank" rel="noopener" href="https://modrinth.com">modrinth.com &#8599;</a>
+      <a target="_blank" rel="noopener" href="https://www.curseforge.com">curseforge.com &#8599;</a>
+    </div>
+  </div>
+  <div class="container"><div class="btm">
+    <span>&copy; <span id="fyear"></span> BLauncher MOD — Minecraft, Amplified.</span>
+    <span>&#9733; Made &amp; sponsored by Arif The Gamer</span>
+  </div></div>
+</footer>
+
+<script src="/assets/data/versions.min.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/api.js" defer></script>
+</body>
+</html>
